@@ -15,7 +15,8 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: '#28C4D9',
 		flexDirection: 'row',
-		justifyContent: 'space-evenly'
+		justifyContent: 'flex-end',
+		alignItems: 'flex-end'
 	},
 	caja1: {
 		// flex: 1,
