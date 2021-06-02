@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 	cajaNaranja: {
 		width: 100,
 		height: 100,
-		// flex: 1,
+		flex: 1,
 		borderWidth: 10,
 		borderColor: 'white',
 		backgroundColor: '#F0A23B',
@@ -38,14 +38,12 @@ const styles = StyleSheet.create({
 		alignSelf:'flex-start',
 	},
 	cajaAzul: {
-		// width: 100,
+		width: 100,
 		height: 100,
 		// flex: 1,
 		borderWidth: 10,
 		borderColor: 'white',
 		backgroundColor: '#28C4D9',
 		// alignSelf:'center'
-		left: 0,
-		right:0
 	},
 });
