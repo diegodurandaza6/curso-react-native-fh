@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
 		borderWidth: 10,
 		borderColor: 'white',
 		backgroundColor: '#F0A23B',
-		left:100
+		// left:100
 	},
 	cajaAzul: {
 		width: 100,
