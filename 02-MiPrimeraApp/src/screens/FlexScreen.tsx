@@ -14,26 +14,27 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#28C4D9',
-		flexDirection: 'row',
-		justifyContent: 'flex-end',
-		alignItems: 'flex-end'
+		
 	},
 	caja1: {
 		// flex: 1,
 		borderWidth: 2,
 		borderColor: 'white',
-		fontSize: 30
+		fontSize: 30,
+		alignSelf: 'center'
 	},
 	caja2: {
 		// flex: 1,
 		borderWidth: 2,
 		borderColor: 'white',
-		fontSize: 30
+		fontSize: 30,
+		alignSelf: 'flex-end'
 	},
 	caja3: {
 		// flex: 1,
 		borderWidth: 2,
 		borderColor: 'white',
-		fontSize: 30
+		fontSize: 30,
+		alignSelf: 'flex-start'
 	},
 });
