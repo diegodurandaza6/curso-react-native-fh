@@ -35,7 +35,10 @@ export const Pagina1Screen = ({ navigation }: Props) => {
 				title="Ir persona"
 				onPress={ () => navigation.navigate('PersonaScreen') }
 			/> */}
-			<Text>Navegar con argumentos</Text>
+			<Text style={{
+				marginVertical: 20,
+				fontSize: 20,
+			}}>Navegar con argumentos</Text>
 
 			<View style={{flexDirection: 'row'}}>
 				<TouchableOpacity 
