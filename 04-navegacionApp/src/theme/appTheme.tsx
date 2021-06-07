@@ -40,7 +40,9 @@ export const styles = StyleSheet.create({
 		marginHorizontal: 50,
 	},
 	menuBoton: {
-		marginVertical: 10
+		marginVertical: 10,
+		flexDirection: 'row',
+		alignItems: 'center'
 	},
 	menuTexto: {
 		fontSize: 20
