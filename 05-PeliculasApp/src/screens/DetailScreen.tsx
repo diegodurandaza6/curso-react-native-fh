@@ -20,7 +20,7 @@ export const DetailScreen = ({route, navigation}: Props) => {
 	const movie = route.params
 	const uri = `https://image.tmdb.org/t/p/w500${movie.poster_path}`
 
-	console.log(movie.id);
+	//console.log(movie.id);
 
 	const { isLoading, cast, movieFull } =useMovieDetails(movie.id)
 
