@@ -14,7 +14,8 @@ export const useDraggableView = () => {
 				dy: pan.y,
 			},
 		],
-		{useNativeDriver: false}),
+		{useNativeDriver: false}
+		),
 		onPanResponderRelease: () => {
 			Animated.spring(
 				pan, // Auto-multiplexed
