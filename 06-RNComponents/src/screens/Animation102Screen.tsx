@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Animated, StyleSheet, View } from 'react-native';
 import { useDraggableView } from '../hooks/useDraggableView';
+import { ThemeContext } from '../context/theme/ThemeContext';
 
 export const Animation102Screen = () => {
 
-	const {panResponder, pan} = useDraggableView()
+	const {panResponder, pan} = useDraggableView();
+	const { theme: { colors } } = useContext(ThemeContext);
 
 	return (
 		<View style={{...styles.container}}>
 			<Animated.View 
 				{...panResponder.panHandlers}
-				style={[pan.getLayout(), styles.purpleBox]} 
+				style={[pan.getLayout(), {...styles.purpleBox, backgroundColor: colors.primary}]} 
 			/>
 		</View>
 	)

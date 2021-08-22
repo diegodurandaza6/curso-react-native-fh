@@ -1,11 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { StyleSheet, TextInput, View, KeyboardAvoidingView, Platform, ScrollView, TouchableWithoutFeedback, Keyboard, Text } from 'react-native';
 import { HeaderTitle } from '../components/HeaderTitle';
 import { CustomSwitch } from '../components/CustomSwitch';
 import { useForm } from '../hooks/useForm';
 import { styles } from '../theme/appTheme';
+import { ThemeContext } from '../context/theme/ThemeContext';
 
 export const TextInputScreen = () => {
+
+	const { theme:{colors} } = useContext(ThemeContext);
 
 	const {form, onChange, isSuscribe} = useForm({
 		name: '',
@@ -25,16 +28,16 @@ export const TextInputScreen = () => {
 						<HeaderTitle title="TextInput" />
 
 						<TextInput
-							style={stylesScreen.inputStyle}
-							placeholderTextColor="black"
+							style={{...stylesScreen.inputStyle, borderColor: colors.text, color: colors.text}}
+							placeholderTextColor={colors. text}
 							placeholder="Ingrese su nombre"
 							autoCorrect={false}
 							autoCapitalize="words"
 							onChangeText={(value) => onChange(value, 'name')}
 						/>
 						<TextInput
-							style={stylesScreen.inputStyle}
-							placeholderTextColor="black"
+							style={{...stylesScreen.inputStyle, borderColor: colors.text, color: colors.text}}
+							placeholderTextColor={colors. text}
 							placeholder="Ingrese su email"
 							autoCorrect={false}
 							autoCapitalize="none"
@@ -51,8 +54,8 @@ export const TextInputScreen = () => {
 						<HeaderTitle title={JSON.stringify(form, null, 3)} />
 						<HeaderTitle title={JSON.stringify(form, null, 3)} />
 						<TextInput
-							style={stylesScreen.inputStyle}
-							placeholderTextColor="black"
+							style={{...stylesScreen.inputStyle, borderColor: colors.text, color: colors.text}}
+							placeholderTextColor={colors. text}
 							placeholder="Ingrese su teléfono"
 							onChangeText={(value) => onChange(value, 'phone')}
 							keyboardType="number-pad"

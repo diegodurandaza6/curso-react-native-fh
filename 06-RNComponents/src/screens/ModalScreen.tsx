@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Button, Modal, Text, View } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { HeaderTitle } from '../components/HeaderTitle';
 import { useState } from 'react';
+import { ThemeContext } from '../context/theme/ThemeContext';
 
 export const ModalScreen = () => {
 
 	const [isVisible, setIsVisible] = useState(false);
+	const { theme: { colors } } = useContext(ThemeContext);
 
 	return (
 		<View style={styles.globalMargin}>
@@ -33,7 +35,7 @@ export const ModalScreen = () => {
 					<View style={{
 						width: 200,
 						height: 200,
-						backgroundColor:'white',
+						backgroundColor: colors.background,
 						justifyContent: 'center',
 						alignItems: 'center',
 						shadowOffset:{
